@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //função para adicionar nomes a lista
     addButton.addEventListener("click", function () {
         const name = nameInput.value.trim();
-        if (name && !names.includes(name)) {
+        if (name == "") {
+            alert("Inserir um nome válido!!")
+        } else if (name && !names.includes(name)) {
             names.push(name);
             updateNameList();
             nameInput.value = "";
